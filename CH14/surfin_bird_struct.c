@@ -115,7 +115,7 @@ project: surfin bird struct
  *             Only access elements of the char array found at both sentence_ptr and searchWord_ptr
  *                 using address arithmetic (AKA pointer math).  The definition of this function should 
  *                 be entirely devoid of the [ and ] characters.  (e.g., sentence_ptr[i] is forbidden)
- *             The only guarantees for the arguments are:
+ *             The only guarantees for the arguments are:sdfsdfsdfsdfsdf
  *                 Any string found at sentence_ptr is null-terminated
  *                 Any string found at searchWord_ptr is null-terminated
  *             There is no guarantee sentence_ptr has an address (return NULL if it's NULL and assign the
