@@ -1,34 +1,21 @@
 #include <stdio.h>
-#include <strings.h>
+#include <string.h>
+
+void ed(char *sentence);
 
 int main()
 {
-    int results[11];
-    int pass = 0;
-    int fail = 0;
-    for (int i=0; i<10; i++)
+    char *sentences[3] = {"this wont end in the right letters","but this one willed","and this one will end.... ed"};
+    for (int i=0;i<=2;i++)
     {
-        printf("Enter score as 1 = pass and 2 = fail: ");
-        scanf("%i",&results[i]);
+        ed(sentences[i]);
     }
-    int index = 0;
-    while(results[index])
+}
+
+void ed(char *sentence)
+{
+    if (sentence[strlen(sentence)-2]== 'e'&&sentence[strlen(sentence)-1]=='d')
     {
-        if (results[index] == 1)
-        {
-            pass++;
-        }
-        if (results[index] == 2)
-        {
-            fail++;
-        }
-        index++;
+        printf("%s\n",sentence);
     }
-    if (pass >=8)
-    {
-        printf("\nInstructor bonus!!\n");
-    }
-    printf("\n%i students have passed!!!!\n",pass);
-    printf("\n%i students have failed!!!!\n\n",fail);
-    return(0);
 }

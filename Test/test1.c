@@ -1,25 +1,18 @@
-// p= (type *)malloc(size)
-
-#include <stdio.h>
-#include <stdlib.h>
-
+ #include <stdio.h>
+ #include <strings.h>
+ #include <stdlib.h>
+ 
 int main()
 {
-    int num1, num2, num3,temp;
-    printf("enter 3 numbers, each separated by a space:");
-    scanf("%d %d %d",&num1,&num2,&num3);
-    if (num1 > num2)
+    int num;
+    int rev = 0;
+    printf("Please enter the number to be reverse\n>");
+    scanf("%i",&num);
+    while (num>0)
     {
-        temp = num1;
+        rev=(rev*10)+(num%10);
+        num/=10;
     }
-    else if (num2 > num1)
-    {
-        temp = num2;
-    }
-    if (num3 > temp)
-    {
-        temp = num3;
-    }
-    printf("\n%i\n",temp);
+    printf("%i",rev);
     return(0);
 }

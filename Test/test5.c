@@ -2,32 +2,20 @@
 #include <strings.h>
 
 
-int main()
+int main ()
 {
-    int i, n, temp, j, arr[10];
-    printf("\nEnter the number of elements in the array");
-    scanf("%d",&n);
-    printf("\nEnter the elements: ");
-    for(i=0;i<n;i++)
+    int num;
+    char letter;
+    printf("Please enter an ascii value(65-90 or 97-122)\n>");
+    scanf("%i",&num);
+    if ((num>64 && num <91) || (num>96 && num<123))
     {
-        scanf("%d",&arr[i]);
+        letter = num;
+        printf("%i ASCII value is %c\n",num,letter);
     }
-    for (i=0;i<n;i++)
+    else
     {
-        for (j=0;j<n-i-1;j++)
-        {
-            if (arr[j]>arr[j+1])
-            {
-                temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
-            }
-        }
-    }
-    printf("\nThe array sorted in ascending order is: \n");
-    for (i=0;i<n;i++)
-    {
-        printf("%d\n",arr[i]);
+        printf("YOU ENTERED AN INCORRECT VALUE BUCKO\n");
     }
     return(0);
 }
